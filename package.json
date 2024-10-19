@@ -7,8 +7,12 @@
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier --write .",
-    "lint": "npx eslint . --fix",
-    "prepare": "husky install"
+    "lint": "npx eslint **/*.js",
+    "lint-fix": "npx eslint --fix **/*.js",
+    "prepare": "husky install",
+    "test": "npm run test-unit",
+    "test-unit": "jest",
+    "test-watch": "jest --watch"
   },
   "husky": {
     "hooks": {
@@ -25,10 +29,10 @@
   "author": "Noroff",
   "license": "ISC",
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "eslint": "^9.13.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "eslint": "^8.57.1",
+    "eslint-plugin-jest": "^28.8.3",
     "globals": "^15.11.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.10",
