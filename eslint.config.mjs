@@ -4,5 +4,8 @@ import pluginJs from '@eslint/js';
 export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
-  { rules: { 'no-unused-vars': 'error' } },
+  {
+    plugins: ['jest'],
+    rules: { 'no-unused-vars': 'error' },
+  },
 ];
