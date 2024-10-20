@@ -1,4 +1,3 @@
-import { jest, describe, it, expect } from '@jest/globals';
 import { login } from './login.js';
 import { remove, save } from '../../storage/index.js';
 import { logout } from './logout.js';
